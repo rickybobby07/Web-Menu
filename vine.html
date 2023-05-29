@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: rgb(255, 250, 244);
+    }
+
+    .box {
+      width: 380px;
+      height: 410px;
+      background-color: #f2f2f2;
+      border-radius: 10px;
+      margin: 50px;
+      display: inline-block;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .box:hover {
+      transform: scale(1.05);
+    }
+
+    .box img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .box .details {
+      padding: 3px;
+    }
+
+    .box h2 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .box p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+
+    a {
+      margin-top: 2px;
+      background-color: #f5ecec;
+      overflow: hidden;
+      height: 20px;
+      width: 20%;
+      display: flex;
+      justify-content: center;
+      border-radius: 10px 10px 10px 10px;
+      color: #131313;
+      text-align: center;
+      text-decoration: none;
+      margin-left: 40%;
+      border: 1px solid burlywood;
+      padding: 15px;
+    }
+
+    a:hover {
+      background-color: #ddd;
+      color: #333;
+      font-size: larger;
+    }
+
+    .top {
+      width: 100%;
+      height: 40px;
+      background-color: rgb(235, 194, 50);
+    }
+
+    .top p {
+      text-align: center;
+      padding: 10px;
+      color: rgb(250, 250, 250);
+    }
+
+    .footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      height: 60px;
+    }
+    h3{
+        color: #000;
+    }
+  </style>
+</head>
+<body>
+  <div class="top">
+    <p>SignUp for a Better Experience</p>
+  </div>
+
+  <a href="dinner.html">Dinner</a>
+  <br>
+  <a href="menus.html">Sunday Lunch</a>
+  <br>
+  <a href="vine.html">Wine List</a>
+
+
+
+  <div id="VineContainer"></div>
+
+  <script>
+    fetch("Script/vine.json")
+      .then(response => response.json())
+      .then(data => {
+        const wines = data.wines;
+
+        function createWineBox(wine) {
+          const container = document.getElementById("VineContainer");
+
+          const box = document.createElement("div");
+          box.className = "box";
+
+          const image = document.createElement("img");
+          image.src = wine.image;
+          image.alt = wine.name;
+
+          const details = document.createElement("div");
+          details.className = "details";
+
+          const heading = document.createElement("h2");
+          heading.textContent = wine.name;
+
+          const description = document.createElement("p");
+          description.textContent = wine.description;
+
+
+          const price = document.createElement("div");
+          price.className = "price";
+          price.textContent = "Price: $" + wine.price;
+          const company = document.createElement("h3");
+          company.textContent = wine.company;
+          details.appendChild(heading);
+          details.appendChild(description);
+          details.appendChild(price);
+          box.appendChild(image);
+          box.appendChild(details);
+          box.appendChild(company);
+
+          container.appendChild(box);
+        }
+
+        wines.forEach(wine => {
+          createWineBox(wine);
+        });
+      })
+      .catch(error => {
+        console.log("Error fetching wines:", error);
+      });
+  </script>
+
+  <footer class="footer">
+    <p>&copy; 2023 Recipe Website. All rights reserved.</p>
+  </footer>
+</body>
+</html>

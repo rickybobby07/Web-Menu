@@ -1,0 +1,47 @@
+{
+    "recipes": [
+      {
+        "image": "Images/9380-roast-leg-of-lamb-DDMFS-4x3-088295149a224717acbfbfb069098c3e.jpg",
+        "name": "Lamb",
+        "prepTime": "20 minutes",
+        "cookTime": "30 minutes",
+        "price": 15.99
+      },
+      {
+        "image": "Images/bowl.webp",
+        "name": "Hawaiian poke bowl",
+        "prepTime": "15 minutes",
+        "cookTime": "45 minutes",
+        "price": 12.99
+      },
+      {
+        "image": "Images/grilled.jpg",
+        "name": "Grilled Fish",
+        "prepTime": "30 minutes",
+        "cookTime": "60 minutes",
+        "price": 18.99
+      },
+      {
+        "image": "Images/chicken-Biryani.jpg",
+        "name": "Chicken Biryani",
+        "prepTime": "9 minutes",
+        "cookTime": "55 minutes",
+        "price": 10.99
+      },
+      {
+        "image": "Images/roast.jpg",
+        "name": "Roast Dinner",
+        "prepTime": "20 minutes",
+        "cookTime": "30 minutes",
+        "price": 16.99
+      },
+      {
+        "image": "Images/g.jpg",
+        "name": "Puff Pastry Swirl",
+        "prepTime": "10 minutes",
+        "cookTime": "50 minutes",
+        "price": 8.99
+      }
+    ]
+  }
+  

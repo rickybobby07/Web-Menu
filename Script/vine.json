@@ -1,0 +1,26 @@
+{
+    "wines": [
+      {
+        "image":"Images/jackob.webp",
+        "name": "Cabernet Sauvignon",
+        "price": 25.99,
+        "description": "A full-bodied red wine with rich flavors of blackcurrant, cherry, and oak.",
+        "company": "Vineyard Estates"
+      },
+      {
+        "image":"Images/red.jpg",
+        "name": "Chardonnay",
+        "price": 19.99,
+        "description": "A crisp white wine with notes of apple, citrus, and vanilla.",
+        "company": "Sunset Vineyards"
+      },
+      {
+        "image":"Images/windsor.avif",
+        "name": "Merlot",
+        "price": 22.99,
+        "description": "A smooth and velvety red wine with hints of plum, blackberry, and chocolate.",
+        "company": "Oakridge Winery"
+      }
+    ]
+  }
+  

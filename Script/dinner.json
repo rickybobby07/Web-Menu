@@ -1,0 +1,26 @@
+{
+    "recipes": [
+      {
+        "image": "Images/chicken-Biryani.jpg",
+        "name": "Chicken Biryani",
+        "prepTime": "9 minutes",
+        "cookTime": "55 minutes",
+        "price": 10.99
+      },
+      {
+        "image": "Images/roast.jpg",
+        "name": "Roast Dinner",
+        "prepTime": "20 minutes",
+        "cookTime": "30 minutes",
+        "price": 16.99
+      },
+      {
+        "image": "Images/g.jpg",
+        "name": "Puff Pastry Swirl",
+        "prepTime": "10 minutes",
+        "cookTime": "50 minutes",
+        "price": 8.99
+      }
+    ]
+  }
+  
